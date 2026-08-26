@@ -29,13 +29,13 @@ public class FlexibleCompanyDemo {
     	emps[0] = new MereClerk("철수", 100);
     	emps[1] = new MereClerk("영희", 100);
     	emps[2] = new Manager("홍길동", 200, "인사부");
-
         
         
         for(Employee emp: emps) {
         	System.out.print("현재 월급입니다. ");
-        	
-        	System.out.print("부서명= " + ((Manager)emp).getDeptName() + " " );
+        	if(emp instanceof Manager) {
+        		System.out.print("부서명= " + ((Manager)emp).getDeptName() + " 관리자" );
+        	}
         	System.out.println(emp.getName() + "의 현재 월급은 " + emp.getSalary() + " 만원 입니다.");
         	
         	emp.manageSalary(10);
