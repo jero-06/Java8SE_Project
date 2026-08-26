@@ -1,6 +1,6 @@
 package chapter5.oop.good;
 
-public class InFlexibleCompanyDemo {
+public class FlexibleCompanyDemo {
     public static void main(String[] args) {
         
         MereClerk mereClerk1 = new MereClerk("철수", 100);
