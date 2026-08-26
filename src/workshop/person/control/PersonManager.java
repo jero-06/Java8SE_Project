@@ -8,6 +8,10 @@ public class PersonManager {
 		
 		PersonEntity[] persons = new PersonEntity[10];
 		personManager.fillPersons(persons);
+		personManager.showPersons(persons);
+		//personManager.findByGender(persons, '여');
+		System.out.println(personManager.findByGender(persons, '여') + "명 입니다.");
+		p
 		
 	}
 	
@@ -22,7 +26,37 @@ public class PersonManager {
 		persons[7] = new PersonEntity("유성미","7103282025101", "서울 은평구", "02-452-0939");
 		persons[8] = new PersonEntity("황재현","7806231031101", "인천 중구", "032-327-2202");
 		persons[9] = new PersonEntity("최철수","7601211025101", "인천 계양구", "032-122-7832");
+	}
+	
+	public void showPersons(PersonEntity[] persons) {
+		for (PersonEntity person : persons) {
+			System.out.println("[이름] " + person.getName() + "\t [성별] " + 
+					person.getGender() +  "\t [주소] " + person.getAddress());
+		}
+	}
+	
+	public int findByGender(PersonEntity[] persons, char gender) {
+		int genderCnt = 0;
+		for (PersonEntity person : persons) {
+			//char는 primitive type이므로 값을 비교할 때는 == 연산자를 사용해도 됨
+			if(person.getGender() == gender) {
+				genderCnt++;
+			}
+		}
+		
+		return genderCnt;
+	}
 
+	public void showPerson(PersonEntity[] persons, String name) {
+		for (PersonEntity person : persons) {
+			if(person.getName().equals(name)) {
+				System.out.println("[이름] " + person.getName());
+				System.out.println("[성별] " + person.getGender());
+				System.out.println("[전화번호] " + person.getPhone());
+				System.out.println("[주소] " + person.getAddress());
+				break;
+			}
+		}
 	}
 	
 }
