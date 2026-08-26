@@ -39,7 +39,7 @@ public class ManageBook {
 		for (Publication publication : pubs) {
 			System.out.println(publication);
 		}
-		
+		//빠삐용
 		Publication pub2 = pubs[2];
 		System.out.println("=== 가격변경 전 ===");
 		System.out.println(pub2.getTitle() + " = " + pub2.getPrice());
