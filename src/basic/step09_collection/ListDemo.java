@@ -32,7 +32,7 @@ public class ListDemo {
 		System.out.println("크기      : " + names.size());       // 배열은 length, List 는 size()
 		System.out.println("첫 번째   : " + names.get(0));       // 배열은 [0], List 는 get(0)
 		System.out.println("포함 여부 : " + names.contains("김하늘"));
-		System.out.println("위치      : " + names.indexOf("김하늘"));
+		System.out.println("위치      : " + names.indexOf("김하늘"));  
 		System.out.println("비었는가  : " + names.isEmpty());
 
 		// 3. 수정과 삭제
@@ -42,7 +42,7 @@ public class ListDemo {
 		System.out.println(names);
 
 		// 4. 순회 방법 3가지
-		//    (1) 향상된 for : 가장 많이 쓴다.
+		//    (1) 향상된 for : 가장 많이 쓴다.(enhanced for)
 		for (String name : names) {
 			System.out.println("향상된 for : " + name);
 		}
