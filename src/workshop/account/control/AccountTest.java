@@ -10,7 +10,7 @@ public class AccountTest {
 			Account account2 = new Account("A1200","222-22-3488",200000);
 			//getClass().getName()+ '@' + Interger.toHexString(hashCode())
 			//출금
-			account2.withdraw(500000);
+			account2.withdraw(10000);
 			System.out.println(account2.toString());
 			
 			Account account = new Account();
