@@ -6,6 +6,7 @@ public class Student {
 	private String major;
 	private int grade;
 	
+	
 	public String getStudentId() {
 		return studentId;
 	}
