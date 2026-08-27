@@ -20,7 +20,7 @@ public class Library {
 	
 	// 도서 추가
 	public void addBook(Book book) {
-		book.add(book);
+		books.add(book);
 		System.out.println("도서가 추가되었습니다: " + book.getTitle()); 
 		
 	}
@@ -28,8 +28,8 @@ public class Library {
 	// 제목 검색
 	public Book findBookByTitle(String title) {
 		for (Book book : books) {
-			if (book.getTitle().equls(title)) {
-				reture book;
+			if (book.getTitle().equals(title)) {
+				return book;
 			}
 		}
 		return null;
@@ -40,8 +40,8 @@ public class Library {
 	public List<Book> findBooksByAuthor(String author) {
 		List<Book> result = new ArrayList<>();
 		for (Book book : books) {
-			if (book.getAuthor().equls(author)) {
-				reture add(book);
+			if (book.getAuthor().equals(author)) {
+				result.add(book);
 			}
 		}
 		return result;
@@ -51,8 +51,8 @@ public class Library {
 	// ISBN 검색
 	public Book findBookByISBN(String isbn) {
 		for (Book book : books) {
-			if (book.getIsbn().equls(isbn)) {
-				reture book;
+			if (book.getIsbn().equals(isbn)) {
+				return book;
 			}
 		}
 		return null;
@@ -62,7 +62,7 @@ public class Library {
 	// ISBN 도서 대출
 	public boolean checkOutBook(String isbn) {
 		Book book = findBookByISBN(isbn);
-		if (book ! = null && book.isAvailable()) {
+		if (book != null && book.isAvailable()) {
 			return book.checkOut();
 		}
 		return false;
@@ -72,7 +72,7 @@ public class Library {
 	// ISBN 도서 대출
 	public boolean returnBook(String isbn) {
 		Book book = findBookByISBN(isbn);
-		if (book ! = null && book.isAvailable()) {
+		if (book != null && book.isAvailable()) {
 			book.returnBook();
 			return true;
 		}
@@ -118,6 +118,4 @@ public class Library {
 		return getTotalBooks() - getAvailableBooksCount();
 	}
 
-	
-	
 }
