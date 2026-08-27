@@ -76,7 +76,7 @@ public class Book {
 	
 	// 반납 처리 메서드 isAvailable을 true로 변경
 	public void returnBook() {
-		this.isAvaliable = ture;
+		this.isAvaliable = true;
 		
 	}
 	
