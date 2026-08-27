@@ -25,12 +25,15 @@ public class Student {
 	public String getStudentId() {
 		return studentId;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public String getMajor() {
 		return major;
 	}
+
 	public int getGrade() {
 		return grade;
 	}
