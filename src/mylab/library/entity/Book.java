@@ -25,7 +25,7 @@ public class Book {
 	
 	// Getter & Setter
 	public String getTitle() {
-		return author;
+		return title;
 	}
 
 	public void setTitle(String title) {

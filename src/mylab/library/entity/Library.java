@@ -34,6 +34,7 @@ public class Library {
 		}
 		return null;
 		
+		
 	}
 	
 	// 저자 검색
@@ -72,7 +73,7 @@ public class Library {
 	// ISBN 도서 대출
 	public boolean returnBook(String isbn) {
 		Book book = findBookByISBN(isbn);
-		if (book != null && book.isAvailable()) {
+		if (book != null && !book.isAvailable()) {
 			book.returnBook();
 			return true;
 		}
